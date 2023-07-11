@@ -173,8 +173,24 @@ do{
     i++;
 }
 while(i<10);
-console.log(text);      */
+console.log(text);      
 
-//comapring for loop and while loop
+//comparing for loop and while loop
+//for
+const cars=['BMW','Toyota','Ford','Saab'];
+let i= 0;
+let text='';
+for (let i = 0; i < cars.length; i++) {
+    text += cars[i]+'\n';
+}
+console.log(text);
 
-
+//while
+const cars=['BMW','Toyota','Ford','Saab'];
+let i = 0;
+let text= '';
+while(i < cars.length){
+    text +=cars[i] + '\n'
+    i++;
+}
+console.log(text);     */
