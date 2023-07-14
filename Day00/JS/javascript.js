@@ -226,7 +226,7 @@ val= num1 % num2;
 //Increment
 val= 1;
 val++; 
-//++ val in this firstly it will increment value of varable
+//++ val           in this firstly it will increment value of variable
 
 //Decrement
 val= 1
@@ -360,8 +360,8 @@ const x= 30;
 const y= 20;
 
 let val = 45;
-// += A
-dds and assign operator
+// += 
+Adds and assign operator
 val+= 5;
 // -= Subtract and assign operator
 val-= 20;

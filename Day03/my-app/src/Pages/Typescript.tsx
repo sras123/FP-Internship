@@ -1,5 +1,4 @@
 import React from 'react'
-import { getJSDocReadonlyTag } from 'typescript';
 
 const Typescript = () => {
 

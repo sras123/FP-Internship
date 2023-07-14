@@ -72,7 +72,7 @@ const Home = () => {
 
 
     if (loading) {
-        <>Loading...</>
+       <>Loading...</>
     }
 
 
@@ -84,23 +84,27 @@ const Home = () => {
             <h1>Users</h1>
 
             <table>
-                <tr>
+                <thead>
+                    <tr>
                     <th>Name</th>
                     <th>Email</th>
                     <th>Username</th>
                     <th>Address</th>
                     <th>Phone</th>
-                </tr>
+                    </tr>
+                </thead>
 
 
                 {data?.map(user => (
-                    <tr key={user.id}>
+                    <tbody key={user.id}>
+                        <tr>
                         <td>{user.name}</td>
                         <td>{user.email} </td>
                         <td>{user.username} </td>
                         <td>{user.address.city} </td>
                         <td>{user.phone} </td>
-                    </tr>
+                        </tr>
+                    </tbody>
                 ))}
 
             </table>
