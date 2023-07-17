@@ -10,6 +10,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Main/>}/>
         <Route path="/usermatch" element={<UserMatch/>}/>
+        <Route path="*" element={<UserMatch/>}/>
       </Routes>
     </div>
   );

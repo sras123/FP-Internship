@@ -2,16 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { userType } from '../Pages/Main'
 import axios from 'axios';
 
-const UserDetails = {
-    users: {
-        id: "",
-        name: "",
-        username: "",
-        email: "",
-        phone: "",
-        address: ""
-    }
-}
+
 const Usernames: React.FC = () => {
     const [users, setUsers] = useState<userType[]>([]);
 
@@ -28,7 +19,26 @@ const Usernames: React.FC = () => {
         fetchUsers();
     }, []);
 
-  
+  useEffect(() => {
+    if (!users.length)
+    return;
+
+    let a= Object.assign({}, users);
+    console.log(users);
+    console.log(a);
+    let b= Object.keys(users);
+    console.log(b);
+    let c= Object.values(users);
+    console.log(c);
+
+    users.forEach(user => console.log(user.username));
+
+    if(users.length >= 5 ){
+        console.log(users[4].username);   //which is kamren
+    }
+
+
+  },[users]);
 
 
     return (

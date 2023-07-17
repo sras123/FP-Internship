@@ -12,7 +12,7 @@ const AddToList: React.FC<IProps> = ({student, setStudent}) => {
         note: "",
         img: ""
     })
-
+ 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) : void => {
         setInput({
             ...input,

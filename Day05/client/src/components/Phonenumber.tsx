@@ -1,17 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState , useEffect} from 'react';
 import axios from 'axios';
 import { userType } from '../Pages/Main'
 
-// interface User {
-//   user: userType[];
-// }
 
 const Phonenumber: React.FC = () => {
   const [inputPhoneNumber, setInputPhoneNumber] = useState<string>('');
   const [matchingUser, setMatchingUser] = useState<userType | null>(null);
   const [users, setUsers] = useState<userType[]>([]);
 
-  useState(() => {
+  useEffect(() => {
     axios.get('https://jsonplaceholder.typicode.com/users')
       .then((response) => {
         setUsers(response.data);
