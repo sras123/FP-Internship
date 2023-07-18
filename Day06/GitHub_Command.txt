@@ -1,0 +1,11 @@
+Today I learned about the Git and Github commands.
+Git initialization in local repository
+Creating git repo in github
+Adding the local repo inside the github repository
+Adding files 
+Changes and commits
+Branches
+Merging the branches files
+rebasing the branches
+Git pull
+
