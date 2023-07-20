@@ -3,6 +3,7 @@ import Menu from '../components/Menu'
 import Slogan from '../components/Slogan';
 import Categories from '../components/Categories';
 import AboutUs from '../components/AboutUs';
+import BestProducts from '../components/BestProducts';
 
 const Main = () => {
     return (
@@ -11,6 +12,7 @@ const Main = () => {
         <Slogan/>
         <Categories/>
         <AboutUs/>
+        <BestProducts/>
         </>
 
 

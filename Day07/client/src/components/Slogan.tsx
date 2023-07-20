@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Text, SimpleGrid, Heading, Flex } from "@chakra-ui/react";
+import { Box, Text, SimpleGrid, Heading, Flex, Button, } from "@chakra-ui/react";
 
 const Slogan = () => {
     return (
@@ -13,16 +13,16 @@ const Slogan = () => {
                         SIMPLE, FAST AND CONVENIENT GROCERY STORE
                     </Heading>
                     <SimpleGrid columns={2} padding={'20px'} margin={'50px'} gridGap={'40px'}>
-                        <Box bg='black' h={'50px'}>
-                            <Text color={'white'} align={'center'} mt={'10px'}>
+                        <Button bg='black' h={'50px'} _hover={{bg:'grey'}}>
+                            <Text color={'white'} align={'center'} mt={'2px'}>
                                 Google Play
                             </Text>
-                        </Box>
-                        <Box bg='black'>
-                            <Text color={'white'} align={'center'} mt={'10px'}>
+                        </Button>
+                        <Button bg='black' h={'50px'} _hover={{bg:'grey'}} >
+                            <Text color={'white'} align={'center'} mt={'2px'}>
                                 App Store
                             </Text>
-                        </Box>
+                        </Button>
                     </SimpleGrid>
                 </Box>
                 <Box bg='pink'>
