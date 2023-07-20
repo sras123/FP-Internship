@@ -1,24 +1,26 @@
 import React from 'react';
-import { Stack, SimpleGrid, Flex, Heading, Text, Container, Spacer, Button, Card, CardBody, Image, HStack } from "@chakra-ui/react";
+import { Stack, Flex, Heading, Text, Container, Spacer, Button, Card, CardBody, Image, HStack } from "@chakra-ui/react";
 import { AddIcon } from '@chakra-ui/icons';
+
 
 const BestProducts = () => {
     return (
         <>
-            <Container mt={'90px'}>
+ 
+            <Container mt={'40px'}>
                 <Heading>BEST SELLING PRODUCTS</Heading>
             </Container>
 
             <Stack direction='row' gap={'20'} marginLeft={'300px'} mt={'20px'}>
-                <Button variant='outline' colorScheme='Black' _hover={{ bg: 'pink' }}>All</Button>
-                <Button variant='outline' colorScheme='Black' _hover={{ bg: 'pink' }}>Fruits</Button>
-                <Button variant='outline' colorScheme='Black' _hover={{ bg: 'pink' }}>Vegetables</Button>
-                <Button variant='outline' colorScheme='Black' _hover={{ bg: 'pink' }}>Dairy Products</Button>
-                <Button variant='outline' colorScheme='Black' _hover={{ bg: 'pink' }}>Drinks</Button>
-                <Button variant='outline' colorScheme='Black' _hover={{ bg: 'pink' }}>Spices</Button>
+                <Button variant='outline' colorScheme='Black' _hover={{ bg: 'green.100' }}>All</Button>
+                <Button variant='outline' colorScheme='Black' _hover={{ bg: 'green.100' }}>Fruits</Button>
+                <Button variant='outline' colorScheme='Black' _hover={{ bg: 'green.100' }}>Vegetables</Button>
+                <Button variant='outline' colorScheme='Black' _hover={{ bg: 'green.100' }}>Dairy Products</Button>
+                <Button variant='outline' colorScheme='Black' _hover={{ bg: 'green.100' }}>Drinks</Button>
+                <Button variant='outline' colorScheme='Black' _hover={{ bg: 'green.100' }}>Spices</Button>
             </Stack>
 
-            <HStack mt={'50px'} marginLeft={'250px'} gap={'50'}>
+            <HStack mt={'50px'} marginLeft={'250px'} gap={'50'} marginBottom={'50px'}>
                 <Card maxW={'sm'}>
                     <CardBody>
                         <Image src='https://images.pexels.com/photos/6944172/pexels-photo-6944172.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' h={'400px'}></Image>

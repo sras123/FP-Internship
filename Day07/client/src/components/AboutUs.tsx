@@ -1,14 +1,13 @@
 import React from 'react'
-import { Box, Text, SimpleGrid, Button, Flex } from "@chakra-ui/react";
-
+import { Box, Text, SimpleGrid, Button, Image } from "@chakra-ui/react";
 
 const AboutUs = () => {
     return (
-        <>
-        <SimpleGrid bg={'pink'} columns={2} p={'20px'} mt={'100px'}
+     <>
+        <SimpleGrid bg={'green.100'} columns={2} p={'20px'} mt={'100px'}
             height={'500px'} spacing='40px'>
-            <Box bg={'pink.600'}>
-                <Text color={'white'} align={'center'} mt='150px' fontSize={'40px'}>Image</Text>
+            <Box >
+                <Image src='https://images.pexels.com/photos/2252482/pexels-photo-2252482.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'/>
             </Box>
             <Box >
                 <Text fontSize={'40px'} as='b' mt='30px'  >
@@ -19,14 +18,14 @@ const AboutUs = () => {
                     Vel maiores saepe ea accusantium explicabo eum. Ipsum dolorum quaerat nostrum sint, maiores,
                     cumque reiciendis suscipit repudiandae officia minima fugiat, aliquam consequuntur.
                 </Text>
-                <Button size='lg' mt={'40px'} bg={'pink.400'}>
+                <Button size='lg' mt={'20px'} bg={'green.400'}>
                     Learn More
                 </Button>
             </Box>
         </SimpleGrid>
 
-        <Box bg={'pink'} h={'100px'} mt={'50px'}>
-        <SimpleGrid columns={3} p={'30px'} spacing='40px'>
+        <Box bg={'green.100'} h={'100px'} mt={'50px'}>
+        <SimpleGrid columns={3} p={'30px'} spacing='40px' marginLeft={'200px'}>
             <Box >
                 <Text> 2100+ </Text>
                 <Text> Satisifed Client</Text>
