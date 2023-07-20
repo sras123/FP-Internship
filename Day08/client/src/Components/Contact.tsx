@@ -20,7 +20,7 @@ function Example() {
 const Contact = () => {
     return (
         <>
-            <Box bg={'green.100'} w={'500px'} h={'500px'} mt={'30px'} marginBottom={'20px'}>
+            <Box bg={'green.100'} w={'500px'} h={'500px'} mt={'10px'} marginBottom={'20px'}>
                 <FormControl p={'50px'} mt={'10px'}>
                     <FormLabel>
                         Name

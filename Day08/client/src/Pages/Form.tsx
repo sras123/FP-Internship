@@ -7,7 +7,7 @@ const Form = () => {
   return (
     <>
     <Menu/>
-    <Container mt={'50px'} centerContent>
+    <Container mt={'30px'} centerContent>
         <Heading color={'green.500'}>CONTACT FORM</Heading>
       <Contact/>
     </Container>
