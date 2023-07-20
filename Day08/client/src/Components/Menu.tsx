@@ -1,5 +1,5 @@
 import React from 'react'
-import { HStack, Text, Flex, Heading, Spacer} from '@chakra-ui/react'
+import { HStack, Text, Flex, Heading, Spacer, Avatar } from '@chakra-ui/react'
 import { HamburgerIcon } from '@chakra-ui/icons';
 import {
     Menu,
@@ -23,15 +23,18 @@ const menu = () => {
                 <Text>Offers</Text>
                 <Text>About</Text>
                 <Text>
-                    <Link to= '/form'>
+                    <Link to='/form'>
                         Contact
                     </Link>
                 </Text>
                 <Text>
                     <Link to='/'>
-                    BestProducts
+                        BestProducts
                     </Link>
-                    </Text>
+                </Text>
+
+                <Avatar name='Rihanna Parker' src='https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' />
+
                 <Menu>
                     <MenuButton>
                         <HamburgerIcon />
