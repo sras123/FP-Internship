@@ -1,0 +1,6 @@
+
+ setData({
+          ...data,
+          celcius: response.data.main.temp,
+          name: response.data.name,
+        })
