@@ -5,7 +5,7 @@ import { AddIcon } from '@chakra-ui/icons';
 const BestProducts = () => {
     return (
         <>
-            <Container mt={'90px'}>
+            <Container mt={'40px'}>
                 <Heading>BEST SELLING PRODUCTS</Heading>
             </Container>
 
@@ -18,7 +18,7 @@ const BestProducts = () => {
                 <Button variant='outline' colorScheme='Black' _hover={{ bg: 'pink' }}>Spices</Button>
             </Stack>
 
-            <HStack mt={'50px'} marginLeft={'250px'} gap={'50'}>
+            <HStack mt={'50px'} marginLeft={'250px'} gap={'50'} marginBottom={'50px'}>
                 <Card maxW={'sm'}>
                     <CardBody>
                         <Image src='https://images.pexels.com/photos/6944172/pexels-photo-6944172.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' h={'400px'}></Image>
