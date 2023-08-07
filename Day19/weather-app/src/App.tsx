@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import "./App.css";
-import { Box, Button, Input, Heading, Text, Image } from "@chakra-ui/react";
+import { Box, Input, Heading, Text, Image } from "@chakra-ui/react";
 import axios from "axios";
-import broken_clouds from "./broken_clouds.png";
+
+import useDebounce from "./hook/useDebounce";
 
 function App() {
   const [data, setData] = useState({
@@ -17,18 +18,21 @@ function App() {
   });
   const [location, setLocation] = useState("");
   const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
+  const debouncedValue = useDebounce<string>(location, 500);
+  console.log(debouncedValue);
 
-  const handleClick = () => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setLoading(true);
+    setLocation(e.target.value);
+
     if (location !== "") {
       const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=5a77ceec453603c42e196734682e72f3&units=metric`;
       axios
         .get(url)
         .then((response) => {
-          let imagePath = "";
-          if (response.data.weather[0].main === "broken clouds") {
-            imagePath = "./broken_clouds.png";
-          }
-          console.log(response.data);
+          setLoading(false);
+
           setData({
             ...data,
             Temperature: response.data.main.temp,
@@ -38,13 +42,12 @@ function App() {
             longitude: response.data.coord.lon,
             latitude: response.data.coord.lat,
             description: response.data.weather[0].description,
-            // icon: response.data.weather[0].icon,
-            icon: imagePath,
+            icon: response.data.weather[0].icon,
           });
         })
 
         .catch((err) => {
-          if (err.response.status == 404) {
+          if (err.response.status === 404) {
             setError("Invalid city name");
           } else {
             setError("");
@@ -53,12 +56,15 @@ function App() {
         });
     }
   };
+  if (loading) {
+    <>Loading...</>;
+  }
 
   return (
     <div className="App">
       <Box
         backgroundImage={
-          "https://images.pexels.com/photos/4406352/pexels-photo-4406352.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          "https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
         }
         backgroundRepeat={"no-repeat"}
         backgroundSize={"cover"}
@@ -79,7 +85,7 @@ function App() {
           <Box
             border={"1px solid #f0f0f0"}
             w={"50%"}
-            background={"#9EC378"}
+            background={"#AEAEAE"}
             opacity={0.7}
             minH={"100px"}
           >
@@ -98,8 +104,11 @@ function App() {
             </Text>
             <br />
             <Text fontSize={"34px"} as="i">
-              Icon:
-              <Image src={data.icon} />
+              <Image
+                alt="weather"
+                src={`icons/${data.icon}.png`}
+                marginLeft={"350px"}
+              />
             </Text>
             <br />
             <Box marginRight={"500px"}>
@@ -136,19 +145,22 @@ function App() {
             minH={"100px"}
           >
             <Box>
+              <Heading color={"yellow.200"}>Search City</Heading>
               <Input
                 value={location}
                 width={"400px"}
-                borderColor={"blackAlpha.500"}
+                color={"yellow"}
+                focusBorderColor="pink.400"
                 placeholder="Enter location"
-                variant="filled"
+                _placeholder={{ color: "yellow.500" }}
+                variant="flushed"
                 type="text"
-                onChange={(e) => setLocation(e.target.value)}
+                onChange={handleChange}
                 mt={"30px"}
               />
-              <Button width={"200px"} bgColor={"#9EC378"} onClick={handleClick}>
+              {/* <Button width={"200px"} bgColor={"#9EC378"} onClick={handleClick}>
                 Search
-              </Button>
+              </Button> */}
             </Box>
           </Box>
         </Box>
